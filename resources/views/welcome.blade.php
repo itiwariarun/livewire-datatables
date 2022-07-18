@@ -6,7 +6,11 @@
         <script src="https://cdn.tailwindcss.com"></script>
 
         <title>Laravel-Livewire-Datatables</title>
-
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 @livewireStyles;
@@ -22,22 +26,27 @@
         </style>
     </head>
     <body class="antialiased bg-stone-800">
-        <div class="container mx-auto text-center">
-     
+        <div class="container  text-center">
             <div class="card">
-              <div class="text-4xl font-bold card-header text-slate-100">
+              <div class="text-4xl font-bold card-header bg-stone-400 text-slate-200">
                 Laravel-Livewire-Datatables
                   </div>
-              <div class="py-20 card-body">
+              <div class=" card-body">
+              <div class="justify-left">
+              </div>
                 <livewire:livewire-datatables
-                    searchable="name, email"
+                    searchable="id,name, email"
+
                     exportable
-                    
+
                  />
            
               </div>
             </div>
                  
-        </div>       @livewireScripts;
+        </div>       
+        @livewireScripts;
+        @stack('scripts')
+
     </body>
 </html>
